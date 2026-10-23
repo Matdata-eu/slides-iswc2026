@@ -1,0 +1,20 @@
+{
+  "name": "slides-iswc2026",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Building the Norwegian Railway Knowledge Graph - ISWC 2026 Facade-X tutorial talk (Slidev)",
+  "scripts": {
+    "dev": "slidev slides.md --open",
+    "build": "slidev build slides.md",
+    "export": "slidev export slides.md"
+  },
+  "dependencies": {
+    "@slidev/cli": "52.14.2",
+    "@slidev/theme-seriph": "0.25.0",
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "playwright-chromium": "^1.57.0"
+  },
+  "license": "MIT AND CC-BY-4.0"
+}
