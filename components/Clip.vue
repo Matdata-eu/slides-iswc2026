@@ -1,18 +1,35 @@
 <script setup lang="ts">
-// A looping screen recording. The poster is what the PDF export shows.
+// A looping screen recording that starts from the beginning whenever its slide is shown.
+// Exports (PDF/PNG) show the poster instead of the video.
+import { ref, watch } from 'vue'
+import { useIsSlideActive, useNav } from '@slidev/client'
 defineProps<{ src: string, poster?: string, caption?: string }>()
+const { isPrintMode } = useNav()
+const isActive = useIsSlideActive()
+const video = ref<HTMLVideoElement>()
+
+watch([isActive, video], ([active, el]) => {
+  if (!el) return
+  if (active) {
+    el.currentTime = 0
+    void el.play().catch(() => {})
+  } else {
+    el.pause()
+  }
+}, { immediate: true })
 </script>
 
 <template>
   <figure class="clip">
-    <video :src="src" :poster="poster" autoplay loop muted playsinline />
+    <img v-if="isPrintMode && poster" :src="poster" alt="" />
+    <video v-else ref="video" :src="src" :poster="poster" loop muted playsinline preload="auto" />
     <figcaption v-if="caption">{{ caption }}</figcaption>
   </figure>
 </template>
 
 <style scoped>
 .clip { margin: 0; }
-.clip video {
+.clip video, .clip img {
   width: 100%;
   max-height: 22rem;
   object-fit: contain;

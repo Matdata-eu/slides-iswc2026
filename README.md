@@ -39,7 +39,8 @@ Export to PDF with `npm run export` (needs `playwright-chromium`).
 The recordings in `public/assets` are made with Playwright:
 
 - `node capture/rinf-atlas.mjs` records [RINF Atlas](https://rinf-atlas.matdata.eu/).
-- `node capture/dim-portal.mjs` records the DIM portal. It opens a browser window to sign in
+- `node capture/dim-portal.mjs [--only=dim-data,dim-tps,dim-tools,dim-api]` records the DIM portal,
+  including a scripted TPS mapping demo (zoom, select, hover in both maps). It opens a browser window to sign in
   first, because most portal pages need a Bane NOR account.
 
 ## Publishing

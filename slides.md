@@ -216,28 +216,18 @@ One sentence on why railway is special: it is topology-based. Every signal, ever
 
 # The portal: what we expose
 
-<div class="grid grid-cols-2 gap-6 mt-2">
+<div class="grid grid-cols-2 gap-5 mt-1">
 
-<Clip src="/assets/dim-data.webm" poster="/assets/dim-data.png" caption="railML files · datasets · key figures · TPS mapping" />
+<Clip src="/assets/dim-data.webm" poster="/assets/dim-data.png" caption="railML files per subnetwork · datasets in RDF, JSON-LD, CSV · key figures from the graph" />
 
-<div class="text-sm">
-
-<v-clicks>
-
-- **railML files** per subnetwork, regenerated on every run
-- **Datasets** in RDF, JSON-LD and CSV
-- **Key figures** straight from the graph
-- **TPS mapping**: linking the timetable-planning system's topology to DIM
-
-</v-clicks>
-
-</div>
+<Clip src="/assets/dim-tps.webm" poster="/assets/dim-tps.png" caption="TPS mapping: DIM netelements linked to the timetable-planning topology, both maps in sync" />
 
 </div>
 
 <!--
 [1:00] This is the DIM web portal. Everything you see comes from the knowledge graph.
-(click) railML files for each subnetwork, (click) the datasets themselves, (click) key figures computed from the graph, and (click) the TPS mapping, where we link the topology of the timetable planning system to ours.
+Left: railML files for each subnetwork, the datasets themselves in RDF, JSON-LD and CSV, and key figures computed from the graph.
+Right: the TPS mapping, where we link the topology of the timetable planning system to ours. Hover a netelement on our map and its counterpart lights up in the TPS schematic, and the other way round.
 -->
 
 ---
