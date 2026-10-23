@@ -5,8 +5,8 @@ Comes right after Martin van Harmelen (TriplyDB) and right before Ivo Velitchkov
 ("Benefits of Decoupled Graph Construction"). Ivo's talk argues the same point as Part B,
 so we end by handing over to him instead of repeating his case.
 
-Style: Matdata (Slidev 52, the look of the Sem4Tra deck: Matdata logo, DIM background on the cover),
-presented as "Matdata, with the Bane NOR DIM use case". No Bane NOR template.
+Style: the Bane NOR DIM deck look (navy, Source Sans, vertical-slice cover) with Matdata branding,
+presented as "Matdata, with the Bane NOR DIM use case".
 
 Budget: 17 content slides plus a section divider before Part B, about 19½ minutes of talking, 30 seconds of slack.
 
@@ -64,3 +64,11 @@ Kept in the paper and the Sem4Tra deck, out of this talk:
 
 - `deploy.yml`: build on push to `main` and deploy to GitHub Pages (same as the other Matdata decks).
 - `release.yml`: on a tag, export a PDF and attach it to the release.
+
+## Changes after review (23 Oct)
+
+- Cover with the vertical slice from the Bane NOR decks; Bane NOR colours and fonts throughout.
+- Screen recordings each get a full slide (data, TPS mapping, tools, RINF Atlas), so they are readable.
+- Take-home messages lead with DIM: a knowledge graph serving production systems is a valid case.
+- The advice becomes three layers: triplify, transform, enrich. A new slide shows a real DIM inference rule
+  (topology shortcuts such as `bno:inOperationalPoint`), paid for by trimming slides 4, 11 and 14.

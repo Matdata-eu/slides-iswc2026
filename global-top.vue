@@ -4,7 +4,7 @@ const { currentLayout, currentPage, total } = useNav()
 </script>
 
 <template>
-  <div v-if="currentLayout !== 'cover' && currentLayout !== 'end'" class="abs-tr mt-4 mr-6 md-logo">
+  <div v-if="!['cover', 'end', 'full'].includes(currentLayout)" class="abs-tr mt-4 mr-6 md-logo">
     <img src="/assets/matdata.png" class="h-7" alt="Matdata" />
   </div>
   <div v-if="currentLayout !== 'cover'" class="abs-br mb-3 mr-6 md-page">

@@ -1,5 +1,5 @@
 ---
-theme: seriph
+theme: default
 title: Building the Norwegian Railway Knowledge Graph
 info: |
   ## Building the Norwegian Railway Knowledge Graph
@@ -8,14 +8,13 @@ info: |
   ISWC 2026 · Façade-X tutorial · Bari, 25 October 2026.
 base: /
 routerMode: hash
-class: text-center text-white
+layout: cover
+class: bn-cover
 background: /assets/dim-background.png
 transition: slide-left
 mdc: true
 highlighter: shiki
 lineNumbers: false
-fonts:
-  sans: Inter
 seoMeta:
   ogTitle: Building the Norwegian Railway Knowledge Graph
   ogDescription: A production railway knowledge graph built with SPARQL Anything, and the lesson we learned the hard way.
@@ -23,13 +22,25 @@ drawings:
   persist: false
 ---
 
-<h1 class="!text-5xl">Building the Norwegian<br>Railway Knowledge Graph</h1>
+<div class="bn-cover-panel">
 
-### SPARQL Anything in production, and what we would do differently
+<div class="flex items-center gap-3 mb-8">
+  <img src="/assets/matdata.png" class="h-10 w-10 rounded bg-white p-1" alt="Matdata logo" />
+  <span class="text-xl font-bold">Matdata</span>
+  <span class="opacity-60 mx-1">×</span>
+  <img src="/assets/banenor-logo-inverted.svg" class="h-6" alt="Bane NOR logo" />
+</div>
 
-<div class="abs-bl m-6 text-left text-sm opacity-90">
-Mathias Vanden Auweele · <b>Matdata</b><br>
-with the Bane NOR DIM use case · ISWC 2026 Façade-X tutorial, Bari
+# Building the Norwegian Railway Knowledge Graph
+
+## SPARQL Anything in production, and what we would do differently
+
+<div class="mt-8 opacity-90 text-sm">
+Mathias Vanden Auweele · Matdata<br>
+with the Bane NOR DIM use case<br>
+ISWC 2026 · Façade-X tutorial · Bari
+</div>
+
 </div>
 
 <!--
@@ -40,7 +51,7 @@ with the Bane NOR DIM use case · ISWC 2026 Façade-X tutorial, Bari
 layout: two-cols-header
 ---
 
-# Who, what, and the one thing to remember
+# Who, what, and what to take home
 
 ::left::
 
@@ -65,18 +76,22 @@ Working with **Bane NOR** (Norway's infrastructure manager) on the
 
 <div class="pl-6 border-l border-gray-400/40">
 
-<div class="text-sm uppercase tracking-wide opacity-60">Take-home message</div>
+<div class="text-sm uppercase tracking-wide opacity-60">Take-home messages</div>
 
-<div class="text-2xl mt-3 leading-snug">
-Use SPARQL Anything to <b>triplify the source</b>.<br>
-Transform to your target model in a <b>second step</b>, with rules.
+<div class="text-xl mt-3 leading-snug">
+A knowledge graph <b>can serve production systems</b>: DIM feeds ETCS engineering, train operators and the EU register today.
+</div>
+
+<div class="text-xl mt-4 leading-snug">
+To get there: use SPARQL Anything to <b>triplify the source</b>, then <b>transform and enrich with rules</b>.
 </div>
 
 </div>
 
 <!--
 [0:45] Matdata is me. I work with Bane NOR, the Norwegian infrastructure manager, on their Digital Infrastructure Model, DIM.
-If you only remember one thing: use SPARQL Anything to turn the source into RDF, nothing more, and do the mapping to your target model in a second step with rules. I'll get there in the second half.
+Two things to take home. First: a knowledge graph serving production systems is a valid case, not a research toy. DIM feeds ETCS engineering, train operators and the EU register today.
+Second, how to get there: use SPARQL Anything to turn the source into RDF, nothing more, and do the mapping to your target model, and the enrichment for your users, in a second step with rules.
 -->
 
 ---
@@ -141,7 +156,7 @@ The goal: <b>one authoritative model</b> of the railway infrastructure, serving 
 </v-clicks>
 
 <!--
-[1:30] When someone at a conference says "we use SPARQL Anything", you should ask: is that a proof of concept, a pilot, or production? It makes a big difference.
+[1:15] When someone at a conference says "we use SPARQL Anything", you should ask: is that a proof of concept, a pilot, or production? It makes a big difference.
 Railway is a slow business. Processes inside a company don't change fast. But DIM is in production.
 (click) The ERTMS programme, the European train control system rollout, uses DIM as the first starting point to implement ETCS on the line. That's a major dependency.
 (click) And DIM has been chosen strategically as the successor of the systems that supply infrastructure data to traffic management, traffic planning and timetabling. It will be the foundation for those use cases.
@@ -213,39 +228,30 @@ One sentence on why railway is special: it is topology-based. Every signal, ever
 -->
 
 ---
+layout: full
+---
 
-# The portal: what we expose
-
-<div class="grid grid-cols-2 gap-5 mt-1">
-
-<Clip src="/assets/dim-data.webm" poster="/assets/dim-data.png" caption="railML files per subnetwork · datasets in RDF, JSON-LD, CSV · key figures from the graph" />
-
-<Clip src="/assets/dim-tps.webm" poster="/assets/dim-tps.png" caption="TPS mapping: DIM netelements linked to the timetable-planning topology, both maps in sync" />
-
-</div>
+<Clip full src="/assets/dim-data.webm" poster="/assets/dim-data.png" caption="DIM portal · railML files per subnetwork · datasets in RDF, JSON-LD and CSV · key figures from the graph" />
 
 <!--
-[1:00] This is the DIM web portal. Everything you see comes from the knowledge graph.
-Left: railML files for each subnetwork, the datasets themselves in RDF, JSON-LD and CSV, and key figures computed from the graph.
-Right: the TPS mapping, where we link the topology of the timetable planning system to ours. Hover a netelement on our map and its counterpart lights up in the TPS schematic, and the other way round.
+[0:35] This is the DIM web portal. Everything you see comes from the knowledge graph: railML files for each subnetwork, the datasets themselves in RDF, JSON-LD and CSV, and key figures computed from the graph.
 -->
 
 ---
+layout: full
+---
 
-# The portal: tools and documentation
+<Clip full src="/assets/dim-tps.webm" poster="/assets/dim-tps.png" caption="TPS mapping · DIM netelements linked to the timetable-planning topology, both maps in sync" />
 
-<div class="grid grid-cols-2 gap-6 mt-2">
+<!--
+[0:30] The TPS mapping: we link the topology of the timetable planning system to ours. Hover a netelement on our map and its counterpart lights up in the TPS schematic, and the other way round.
+-->
 
-<Clip src="/assets/dim-tools.webm" poster="/assets/dim-tools.png" caption="Search builder (Sparnatural) · data catalog" />
+---
+layout: full
+---
 
-<div class="text-sm">
-
-- **Search builder** built on **Sparnatural**: point-and-click SPARQL for people who never write SPARQL
-- **Data catalog**: what each dataset contains, where it comes from
-
-</div>
-
-</div>
+<Clip full src="/assets/dim-tools.webm" poster="/assets/dim-tools.png" caption="Search builder on Sparnatural: point-and-click SPARQL · data catalog of what each dataset contains" />
 
 <!--
 [0:45] The tools. The search builder integrates Sparnatural, so people can build SPARQL queries by clicking, without knowing SPARQL. And the data catalog documents what is in each dataset and where it comes from.
@@ -279,26 +285,10 @@ Right: the TPS mapping, where we link the topology of the timetable planning sys
 -->
 
 ---
+layout: full
+---
 
-# RINF Atlas
-
-<div class="grid grid-cols-3 gap-6 mt-2">
-
-<div class="col-span-2">
-<Clip src="/assets/rinf-atlas.webm" poster="/assets/rinf-atlas.png" caption="rinf-atlas.matdata.eu: Europe down to the tracks and signals of Oslo S" />
-</div>
-
-<div class="text-sm">
-
-- Open-source viewer of the **RINF knowledge graph**
-- All countries, from sections of line down to **tracks, switches and signals**
-- Norway's data is generated from DIM
-
-<div class="mt-4 text-xs opacity-70">rinf-atlas.matdata.eu</div>
-
-</div>
-
-</div>
+<Clip full src="/assets/rinf-atlas.webm" poster="/assets/rinf-atlas.png" caption="RINF Atlas (rinf-atlas.matdata.eu) · open source · Europe down to the tracks, switches and signals of Oslo S, generated from DIM" />
 
 <!--
 [0:45] And RINF Atlas, which I open sourced. It shows what is inside the European RINF knowledge graph. Here we zoom from Europe into Oslo Central, where you can see the micro level: tracks, switches, signals, all generated from DIM.
@@ -483,47 +473,55 @@ Fine for one file. But real mappings span files, need geometry, and need fixes t
 </div>
 
 <!--
-[1:00] What does it cost? SPARQL Anything itself takes ten minutes for everything. It's not the problem.
+[0:45] What does it cost? SPARQL Anything itself takes ten minutes for everything. It's not the problem.
 The fix-up layers are: post-processing and splitting take over two hours.
 And rules don't have to be slow: the same SHACL rule set runs in 10 minutes in maplib versus 2 hours in TopBraid.
 -->
 
 ---
 
-# My advice: two stages
+# My advice: triplify, transform, enrich
 
-```mermaid {scale: 0.75}
+```mermaid {scale: 0.7}
 flowchart LR
   S1[CSV] --> SA
   S2[JSON] --> SA
   S3[XML] --> SA
   S4[API · DB · …] --> SA
   SA[SPARQL Anything<br/><i>mechanical</i>] --> SKG[(Source-system<br/>knowledge graph)]
-  SKG --> R[SHACL rules<br/><i>annotated</i>] --> TKG[(Target<br/>knowledge graph)]
+  SKG --> R[SHACL rules<br/><i>transform</i>] --> TKG[(Target<br/>knowledge graph)]
+  TKG --> I[SHACL rules<br/><i>infer</i>] --> TKG
   style SKG fill:#3b82f633,stroke:#2563eb
   style R fill:#22c55e33,stroke:#16a34a
   style TKG fill:#22c55e33,stroke:#16a34a
+  style I fill:#a855f733,stroke:#9333ea
 ```
 
-<div class="grid grid-cols-2 gap-6 mt-4 text-sm">
+<div class="grid grid-cols-3 gap-4 mt-3 text-xs">
 
 <div v-click class="rounded-lg border-t-4 border-blue-500 bg-blue-500/5 p-4">
-<b>Stage 1: replicate the source as RDF</b><br>
+<b>1 · Replicate the source as RDF</b><br>
 A faithful copy of the source system, no semantics added. Light provenance is enough: <i>which file, converted when</i>.
 </div>
 
 <div v-click class="rounded-lg border-t-4 border-green-500 bg-green-500/5 p-4">
-<b>Stage 2: transform with rules</b><br>
+<b>2 · Transform with rules</b><br>
 "All entities of <i>this source class</i> become <i>that target shape</i>, by <i>this rule</i>." This is where <b>real provenance</b> lives.
+</div>
+
+<div v-click class="rounded-lg border-t-4 border-purple-500 bg-purple-500/5 p-4">
+<b>3 · Enrich for the user</b><br>
+Not a scheme change: rules that <b>infer what users need</b>, like topology relations and shortcuts, so their queries stay simple.
 </div>
 
 </div>
 
 <!--
-[2:00] So my advice: don't do what we did. Don't go from the source straight into your target ontology.
+[1:45] So my advice: don't do what we did. Don't go from the source straight into your target ontology.
 (click) First, use SPARQL Anything for what it is great at: replicate the source system as a knowledge graph. CSV, JSON, XML, an API, whatever: the result is RDF that mirrors the source. This step is mechanical. You hardly need provenance here, just which file and when it was converted.
 (click) Then transform from that source graph into your target model with rules, for example SHACL rules. Now you can say: all entities of this source class are converted into this target shape by this specific rule. And because rules are triples, you can annotate them. That's where true provenance matters.
-Ivo will go deeper into exactly this in the next talk.
+(click) And a third layer that is easy to forget: rules that don't change the scheme at all, but add what your users need. Topology relations, shortcuts, derived values. That's what makes a knowledge graph pleasant to consume.
+Ivo will go deeper into the decoupling in the next talk.
 -->
 
 ---
@@ -559,6 +557,57 @@ ex:rule_balise a sh:SPARQLRule ;
 -->
 
 ---
+
+# Enrich for the user: topology shortcuts
+
+<div class="grid grid-cols-5 gap-6">
+
+<div class="col-span-3">
+
+```turtle
+bnd:_inference_netentity_inOperationalPoint
+  a sh:SPARQLRule ;
+  sh:order 3 ;
+  sh:construct """
+    CONSTRUCT { $this bno:inOperationalPoint ?op . }
+    WHERE {
+      ?op a railml3:OperationalPoint ;
+        rtm:hasAreaLocation/rtm:hasAssociatedNetElement
+          /rtm:onNetElement ?netElement .
+      { $this rtm:hasSpotLocation/rtm:onNetElement ?netElement }
+      UNION
+      { $this rtm:hasLinearLocation/rtm:hasAssociatedNetElement
+          /rtm:onNetElement ?netElement }
+    }""" .
+```
+
+</div>
+
+<div class="col-span-2 text-sm">
+
+**In which station is this signal?** In RailTopoModel that is a **5–6 hop** path through locations and net elements.
+
+<div class="mt-3 rounded-lg border-t-4 border-purple-500 bg-purple-500/5 p-3">
+SHACL rules turn the topology into <b>one-hop shortcuts</b>:<br>
+<code>bno:inOperationalPoint</code> · <code>bno:onRailwayLine</code> · <code>bno:onRailwayTrack</code> · <code>bno:onRailwayLineSection</code>
+</div>
+
+<div class="mt-3 text-xs opacity-75">
+Computed once per build, used by the JSON datasets, the search and the explorer. Users query one hop; the topology stays the truth.
+</div>
+
+</div>
+
+</div>
+
+<div class="text-xs opacity-60 mt-2">From the DIM pipeline (simplified): every <code>sh:SPARQLRule</code> runs as an INSERT on the staging graph.</div>
+
+<!--
+[1:00] And this is the third layer, straight from the DIM pipeline. A user asks: in which station is this signal? In RailTopoModel that's a five or six hop path: the signal's location, its net element, the area location of the operational point that covers that net element.
+Nobody should have to write that query. So a SHACL rule computes it once per build and adds a one-hop shortcut: in operational point, on railway line, on railway track. The JSON datasets, the search and the explorer all read those shortcuts. It's not a scheme transformation, it's making the users' life easier, and the topology stays the source of truth.
+-->
+
+---
 layout: center
 class: text-center
 ---
@@ -566,8 +615,8 @@ class: text-center
 # Takeaways
 
 <div class="mt-4 max-w-3xl mx-auto text-left text-lg leading-relaxed space-y-3">
-<div>🚆 A SPARQL Anything pipeline <b>can run in production</b> for a national railway.</div>
-<div>🧱 <b>Triplify first, transform second.</b> Don't map straight into your target model.</div>
+<div>🚆 A knowledge graph <b>serving production systems</b> is a valid case: DIM feeds ETCS engineering, train operators and RINF, built on SPARQL Anything.</div>
+<div>🧱 <b>Triplify first, then transform and enrich with rules.</b> Don't map straight into your target model.</div>
 <div>📐 GeoSPARQL needs <b>linear referencing</b> before network domains can stay in the graph.</div>
 </div>
 
@@ -595,6 +644,6 @@ Mathias Vanden Auweele · mathias@matdata.eu · Next up: Ivo Velitchkov on decou
 </div>
 
 <!--
-[1:00] Three things. A SPARQL Anything pipeline can run in production for a national railway. Triplify first, transform second. And GeoSPARQL needs linear referencing before domains like ours can keep their logic in the graph.
+[1:00] Three things. A knowledge graph serving production systems is a valid case: DIM does it today for ETCS, train operators and RINF, built on SPARQL Anything. Triplify first, then transform and enrich with rules. And GeoSPARQL needs linear referencing before domains like ours can keep their logic in the graph.
 Slides, paper, the portal and RINF Atlas are behind these QR codes. Ivo is up next, on why decoupling graph construction pays off. Thank you.
 -->

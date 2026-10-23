@@ -4,7 +4,7 @@ This repository contains two kinds of material, under two licenses.
 
 Code: MIT License
 -----------------
-Applies to the source code: components/, capture/, global-*.vue,
+Applies to the source code: components/, capture/, global-*.vue, style.css,
 the Slidev configuration and the GitHub workflows.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -33,7 +33,7 @@ credit. Full text: https://creativecommons.org/licenses/by/4.0/legalcode
 
 Not covered
 -----------
-The Bane NOR logo in public/assets/ is a trademark of Bane NOR SF and is
+The Bane NOR logos in public/assets/ are trademarks of Bane NOR SF and are
 not licensed under either license above. The screen recordings and
 screenshots of the DIM portal and RINF Atlas in public/assets/ are included for
 this presentation only.
