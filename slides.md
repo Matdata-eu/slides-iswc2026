@@ -25,10 +25,9 @@ drawings:
 <div class="bn-cover-panel">
 
 <div class="flex items-center gap-3 mb-8">
-  <img src="/assets/matdata.png" class="h-10 w-10 rounded bg-white p-1" alt="Matdata logo" />
-  <span class="text-xl font-bold">Matdata</span>
-  <span class="opacity-60 mx-1">×</span>
-  <img src="/assets/banenor-logo-inverted.svg" class="h-6" alt="Bane NOR logo" />
+  <img src="/assets/matdata.svg" class="h-10 w-10 rounded p-1" alt="Matdata logo" />
+  <span class="text-xl font-bold">Matdata &</span>
+  <img src="/assets/banenor-logo-inverted.svg" class="h-10" alt="Bane NOR logo" />
 </div>
 
 # Building the Norwegian Railway Knowledge Graph
@@ -58,7 +57,7 @@ layout: two-cols-header
 <div class="pr-6 text-sm">
 
 <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.4rem">
-  <img src="/assets/matdata.png" style="height:2.4rem;width:2.4rem" alt="Matdata logo" />
+  <img src="/assets/matdata.svg" style="height:2.4rem;width:2.4rem" alt="Matdata logo" />
   <span style="font-size:1.5rem;font-weight:700">Matdata</span>
 </div>
 
@@ -109,22 +108,23 @@ production system, the DIM.
 # Open-source tools we maintain
 
 <div class="grid grid-cols-3 gap-3 mt-2">
-<div class="oss"><div class="oss-h"><b>MatGUI + Yasgui plugins</b><span>matgui.matdata.eu</span></div><div class="oss-d">Knowledge graph and SPARQL workbench; table, graph, map, chart and explain plugins for Yasgui.</div></div>
-<div class="oss"><div class="oss-h"><b>SHACL Report</b><span>shacl-report.matdata.eu</span></div><div class="oss-d">Validate with SHACL, or read any validator&rsquo;s report, as a readable web view or CI report.</div></div>
-<div class="oss"><div class="oss-h"><b>RDF Rules Playground</b><span>rdf-rules-playground.matdata.eu</span></div><div class="oss-d">Run SHACL-AF rules in the browser and see which rule inferred each triple.</div></div>
-<div class="oss"><div class="oss-h"><b>RDF Compare</b><span>rdf-compare</span></div><div class="oss-d">Fast CLI diff of two RDF files, as two named graphs or a website.</div></div>
-<div class="oss"><div class="oss-h"><b>RINF Atlas</b><span>rinf-atlas.matdata.eu</span></div><div class="oss-d">Map and faceted search over the EU infrastructure register, PROD and UAT.</div></div>
-<div class="oss"><div class="oss-h"><b>RINF Routebook</b><span>rinf-routebook</span></div><div class="oss-d">Route between two stations on the RINF track topology: signals, speeds, gradients.</div></div>
-<div class="oss"><div class="oss-h"><b>Ontology &amp; Schema Explorers</b><span>ontology-explorer · schema-explorer</span></div><div class="oss-d">Ontologies, SKOS, SHACL, XSD and JSON Schema as UML-like diagrams and pages.</div></div>
-<div class="oss"><div class="oss-h"><b>SPARQL Guard</b><span>sparql-guard</span></div><div class="oss-d">Access-control proxy for any SPARQL endpoint: graph and row-level policies in SHACL.</div></div>
-<div class="oss"><div class="oss-h"><b>RDF Data Manager</b><span>rdf-data-manager</span></div><div class="oss-d">Browser-only CRUD over a SPARQL endpoint, forms generated from SHACL/DASH shapes.</div></div>
+<div class="oss"><div class="oss-h"><b>MatGUI + Yasgui plugins</b><span><a href="https://matgui.matdata.eu" target="_blank" rel="noopener">matgui.matdata.eu</a></span></div><div class="oss-d">AI powered knowledge graph and SPARQL workbench; table, graph, map, chart and explain plugins for Yasgui.</div></div>
+<div class="oss"><div class="oss-h"><b>SHACL Report</b><span><a href="https://shacl-report.matdata.eu" target="_blank" rel="noopener">shacl-report.matdata.eu</a></span></div><div class="oss-d">Validate with SHACL, or read any validator&rsquo;s report, as a readable web view or CI report. Analyse the coverage of your SHACL constraints.</div></div>
+<div class="oss"><div class="oss-h"><b>RDF Rules Playground</b><span><a href="https://rdf-rules-playground.matdata.eu" target="_blank" rel="noopener">rdf-rules-playground.matdata.eu</a></span></div><div class="oss-d">Run SHACL-AF rules in the browser and see which rule inferred each triple.</div></div>
+<div class="oss"><div class="oss-h"><b>RDF Compare</b><span><a href="https://matdata-eu.github.io/rdf-compare/" target="_blank" rel="noopener">rdf-compare</a></span></div><div class="oss-d">Fast CLI diff of two RDF files, as two named graphs or a website.</div></div>
+<div class="oss"><div class="oss-h"><b>RINF Atlas</b><span><a href="https://rinf-atlas.matdata.eu" target="_blank" rel="noopener">rinf-atlas.matdata.eu</a></span></div><div class="oss-d">Map and faceted search over the EU infrastructure register, PROD and UAT.</div></div>
+<div class="oss"><div class="oss-h"><b>RINF Routebook</b><span><a href="https://github.com/Matdata-eu/rinf-routebook" target="_blank" rel="noopener">rinf-routebook</a></span></div><div class="oss-d">Route between two stations on the RINF track topology: signals, speeds, gradients.</div></div>
+<div class="oss"><div class="oss-h"><b>Ontology &amp; Schema Explorers</b><span><a href="https://matdata-eu.github.io/ontology-explorer/" target="_blank" rel="noopener">ontology-explorer</a> · <a href="https://matdata-eu.github.io/schema-explorer/" target="_blank" rel="noopener">schema-explorer</a></span></div><div class="oss-d">Ontologies, SKOS, SHACL, XSD and JSON Schema as UML-like diagrams and pages.</div></div>
+<div class="oss"><div class="oss-h"><b>SPARQL Guard</b><span><a href="https://matdata-eu.github.io/sparql-guard/" target="_blank" rel="noopener">sparql-guard</a></span></div><div class="oss-d">Access-control proxy for any SPARQL endpoint: graph and row-level policies in SHACL.</div></div>
+<div class="oss"><div class="oss-h"><b>RDF Data Manager</b><span><a href="https://matdata-eu.github.io/rdf-data-manager/" target="_blank" rel="noopener">rdf-data-manager</a></span></div><div class="oss-d">Browser-only CRUD over a SPARQL endpoint, forms generated from SHACL/DASH shapes.</div></div>
 </div>
 
-<div class="mt-3 text-sm muted">All on <b>github.com/Matdata-eu</b>, most running in the browser. Many grew out of DIM needs.</div>
+<div class="mt-3 text-sm muted">All on <b><a href="https://github.com/Matdata-eu" target="_blank" rel="noopener">github.com/Matdata-eu</a></b>, most running in the browser. Many grew out of DIM needs.</div>
 
 <style>
 .oss { background: var(--c-surface); border-top: 3px solid var(--c-sky); border-radius: 8px; padding: 8px 10px; }
 .oss-h b { color: var(--c-heading); font-size: 14px; display: block; }
+.oss-h span a { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
 .oss-h span { color: var(--c-blue); font-size: 10.5px; font-family: ui-monospace, monospace; }
 .oss-d { font-size: 11.5px; line-height: 1.35; margin-top: 4px; color: var(--c-ink); }
 </style>
@@ -380,7 +380,7 @@ So that's the project, and it is real. Now: why SPARQL Anything, and what I'd do
 </div>
 
 <!--
-[1:30] Why SPARQL Anything? Our team was new to knowledge graphs. We had to learn SPARQL to query the graph anyway, so why learn R2RML or RML on top? One language for mapping and querying.
+[1:15] Why SPARQL Anything? Our team was new to knowledge graphs. We had to learn SPARQL to query the graph anyway, so why learn R2RML or RML on top? One language for mapping and querying.
 And which ontology? The model that covers the most proven use cases wins. ERA is native RDF and mandated for RINF, but railML covers far more of what we need today: asset catalogue, timetabling, ETCS data exchange. And building our own ontology would give us a native ontology and nothing else. So railML is the backbone, ERA is an export target.
 -->
 
@@ -430,8 +430,20 @@ Fine for one file. But real mappings span files, need geometry, and need fixes t
 </div>
 
 <!--
-[1:00] This is how we started. One CONSTRUCT per source file. The SERVICE clause reads the CSV through Façade-X, and the CONSTRUCT writes railML and RTM triples directly. Source to target in one step.
+[0:45] This is how we started. One CONSTRUCT per source file. The SERVICE clause reads the CSV through Façade-X, and the CONSTRUCT writes railML and RTM triples directly. Source to target in one step.
 (click) That's fine for one file. But real mappings span several files, need geometry, and need fixes to the source data. Here's what that did to us.
+-->
+
+---
+
+# One mapping file per source file, lots of copy-paste
+
+<CopyPasteMaps />
+
+<!--
+[1:00] And this is what "one CONSTRUCT per source file" turns into. Every source file gets its own mapping file, and SPARQL Anything runs them one by one.
+Watch the bars: each one is a mapping file, and the coloured part is lines that also appear in another mapping file. Validity periods, designators, labels, the network level, geometry and positioning: the same blocks, copy-pasted again and again.
+Over all 71 mapping files, 63 percent of the lines exist somewhere else too. Fix a bug in how we model validity, and you fix it in 45 files. That's the cost of mapping straight into the target.
 -->
 
 ---
@@ -474,7 +486,7 @@ Fine for one file. But real mappings span files, need geometry, and need fixes t
 </div>
 
 <!--
-[2:00] This is what grew around that simple CONSTRUCT. The source is a GeoPackage, but also XML and JSON. SPARQL Anything doesn't read databases, so a Source Ingestor prepares the files.
+[1:45] This is what grew around that simple CONSTRUCT. The source is a GeoPackage, but also XML and JSON. SPARQL Anything doesn't read databases, so a Source Ingestor prepares the files.
 (click) Data quality issues in the source take months to fix upstream, so we patch in SQL: about a hundred patches, and they must run before anything else reads the data.
 (click) GeoSPARQL is geometry-centric. No linear referencing, no routing, not even a function to get the X coordinate. And many engines don't implement the full spec. So spatial logic went into SQL views in the Source Ingestor, and six Python steps that work on the graph in Fuseki.
 (click) And because mappings span files, 61 post-processing UPDATEs run in a fixed order. That's an imperative program written in SPARQL. Nobody can tell you which rule produced which triple.
@@ -589,7 +601,7 @@ ex:rule_balise a sh:SPARQLRule ;
 <div class="text-xs opacity-60 mt-1">Simplified. Our RINF export already works this way: SHACL-AF rules from the railML graph to ERA, run by maplib.</div>
 
 <!--
-[1:00] Here's what that looks like. Same balise mapping as before, but now as a rule over the source graph.
+[0:45] Here's what that looks like. Same balise mapping as before, but now as a rule over the source graph.
 (click) The rule is a resource: it has a label, it says which source class it reads, a description, when it changed. That's your lineage.
 (click) And the body is still SPARQL, so the team doesn't need to learn anything new. Our RINF export already works like this, with SHACL rules executed by maplib.
 -->
