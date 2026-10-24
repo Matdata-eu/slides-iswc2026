@@ -432,7 +432,7 @@ Over all 71 mapping files, 63 percent of the lines exist somewhere else too. Fix
   </div>
   <div class="row arrows"><div /><div v-click="2">⇡</div><div /><div v-click="3">⇡</div><div /></div>
   <div class="row fixes">
-    <div /><div v-click="2" class="box red">Spatial SQL views<br><span class="opacity-70">SpatiaLite</span></div><div /><div v-click="3" class="box red">61 post-processing<br><span class="opacity-70">SPARQL UPDATEs</span></div><div />
+    <div /><div v-click="2" class="box red">Spatial SQL views<br><span class="opacity-70">SpatiaLite</span></div><div /><div v-click="3" class="box purple">61 post-processing<br><span class="opacity-70">SPARQL UPDATEs</span></div><div />
   </div>
 </div>
 
@@ -444,13 +444,14 @@ Over all 71 mapping files, 63 percent of the lines exist somewhere else too. Fix
 .mess .box { border: 1px solid rgba(128,128,128,.45); border-radius: .4rem; padding: .45rem .5rem; text-align: center; line-height: 1.25; }
 .mess .blue { background: rgba(59,130,246,.12); border-color: #3b82f6; }
 .mess .amber { background: rgba(245,158,11,.14); border-color: #d97706; }
+.mess .purple { background: rgba(147,51,234,.12); border-color: #9333ea; }
 .mess .red { background: rgba(239,68,68,.12); border-color: #dc2626; }
 </style>
 
 <div class="grid grid-cols-3 gap-4 mt-5 text-xs">
 <div v-click="1" class="rounded bg-amber-500/10 p-3"><b>Data patches</b> in SQL, because source fixes take months and must land before anything else reads the data.</div>
 <div v-click="2" class="rounded bg-red-500/10 p-3"><b>GeoSPARQL gaps</b>: no linear referencing, no routing, not even <code>ST_X</code>. Engines don't implement the full spec, so geometry moves to SQL and Python.</div>
-<div v-click="3" class="rounded bg-red-500/10 p-3"><b>Post-processing</b>: dozens of ordered UPDATEs. An imperative program in SPARQL, with no lineage.</div>
+<div v-click="3" class="rounded bg-purple-500/10 p-3"><b>Post-processing</b>: dozens of ordered UPDATEs. An imperative program in SPARQL, with no lineage.</div>
 </div>
 
 <!--
