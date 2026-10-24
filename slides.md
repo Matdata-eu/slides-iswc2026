@@ -51,47 +51,57 @@ ISWC 2026 · Façade-X tutorial · Bari
 layout: two-cols-header
 ---
 
-# Who, what, and what to take home
+# Who is behind this?
 
 ::left::
 
 <div class="pr-6 text-sm">
 
-<div class="flex items-center gap-2 mb-2">
-  <img src="/assets/matdata.png" class="h-9 w-9" alt="Matdata logo" />
-  <span class="text-2xl font-bold">Matdata</span>
+<div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:0.4rem">
+  <img src="/assets/matdata.png" style="height:2.4rem;width:2.4rem" alt="Matdata logo" />
+  <span style="font-size:1.5rem;font-weight:700">Matdata</span>
 </div>
 
-One-person consultancy for semantic mapping and knowledge graphs in rail.
-Working with **Bane NOR** (Norway's infrastructure manager) on the
-**Digital Infrastructure Model (DIM)**.
+A **1-person data-consultancy** specialised in semantic mapping and knowledge graphs for rail.
 
-<img src="/assets/banenor.svg" class="h-7 mt-4" alt="Bane NOR logo" />
+- Working mainly with **ERA**, **Bane NOR** and **Certifer**
+- Hands-on with railML, RTM/RSM, OpenTNF and vendor topology models
+- <b>Role here:</b> semantic modelling & pipeline partner
 
-<div class="text-xs opacity-60 mt-2">A Bane NOR use case, presented by Matdata.</div>
+<div style="display:flex;align-items:center;gap:1.4rem;margin-top:0.6rem;opacity:0.9">
+  <a href="https://www.era.europa.eu/" target="_blank" rel="noopener noreferrer" style="text-decoration:none !important; border-bottom:none !important; text-underline-offset:0 !important; text-decoration-line:none !important"><img src="/assets/era.svg" style="height:1.7rem" alt="ERA logo" /></a>
+  <a href="https://www.certifer.be/" target="_blank" rel="noopener noreferrer" style="text-decoration:none !important; border-bottom:none !important; text-underline-offset:0 !important; text-decoration-line:none !important"><img src="/assets/certifer.jpg" style="height:1.2rem" alt="Certifer logo" /></a>
+  <a href="https://infrabel.be/" target="_blank" rel="noopener noreferrer" style="text-decoration:none !important; border-bottom:none !important; text-underline-offset:0 !important; text-decoration-line:none !important"><img src="/assets/Infrabel_logo.svg" style="height:1.2rem" alt="Infrabel logo" /></a>
+  <a href="https://www.data-treehouse.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none !important; border-bottom:none !important; text-underline-offset:0 !important; text-decoration-line:none !important"><img src="/assets/datatreehouse.svg" style="height:1.2rem" alt="Infrabel logo" /></a>
+</div>
+<div style="display:flex;align-items:center;gap:1.4rem;margin-top:0.6rem;opacity:0.9">
+  <a href="https://kapernikov.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none !important; border-bottom:none !important; text-underline-offset:0 !important; text-decoration-line:none !important"><img src="/assets/Kapernikov_logo_horiz.png" style="height:1.2rem" alt="Kapernikov logo" /></a>
+  <a href="https://www.cognizone.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none !important; border-bottom:none !important; text-underline-offset:0 !important; text-decoration-line:none !important"><img src="/assets/cropped-cognizone_logo-2048x529.png" style="height:1.2rem" alt="Cognizone logo" /></a>
+  <a href="https://www.transurb.com/" target="_blank" rel="noopener noreferrer" style="text-decoration:none !important; border-bottom:none !important; text-underline-offset:0 !important; text-decoration-line:none !important"><img src="/assets/liw-member-5081.png" style="height:1.2rem" alt="Transurb logo" /></a>
+</div>
 
 </div>
 
 ::right::
 
-<div class="pl-6 border-l border-gray-400/40">
+<div class="pl-6 border-l border-gray-400/40 text-sm">
 
-<div class="text-sm uppercase tracking-wide opacity-60">Take-home messages</div>
+<img src="/assets/banenor.svg" style="height:1.9rem;margin-bottom:0.6rem" alt="Bane NOR logo" />
 
-<div class="text-xl mt-3 leading-snug">
-A knowledge graph <b>can serve production systems</b>: DIM feeds ETCS engineering, train operators and the EU register today.
-</div>
+Norway's **national infrastructure manager** — owns and runs the railway network.
 
-<div class="text-xl mt-4 leading-snug">
-To get there: use SPARQL Anything to <b>triplify the source</b>, then <b>transform and enrich with rules</b>.
-</div>
+- 5000+ km of track, signals, switches, bridges, tunnels, catenary
+- Builds, maintains, renews and **plans decades ahead**
+- Owner of the **Digital Infrastructure Model (DIM)** — the graph in this talk
+
+<div class="mt-3 text-xs opacity-70">This is a Bane NOR use case; Matdata collaborates.</div>
 
 </div>
 
 <!--
-[0:45] Matdata is me. I work with Bane NOR, the Norwegian infrastructure manager, on their Digital Infrastructure Model, DIM.
-Two things to take home. First: a knowledge graph serving production systems is a valid case, not a research toy. DIM feeds ETCS engineering, train operators and the EU register today.
-Second, how to get there: use SPARQL Anything to turn the source into RDF, nothing more, and do the mapping to your target model, and the enrichment for your users, in a second step with rules.
+[0:45] Two organisations. Matdata brings the semantic-web know-how; Bane NOR owns the
+railway, the data and the regulatory obligations. Everything you see is a real
+production system, the DIM.
 -->
 
 ---
@@ -174,8 +184,8 @@ Railway is a slow business. Processes inside a company don't change fast. But DI
 </div>
 
 <div class="rounded-lg border-t-4 border-amber-500 bg-amber-500/5 p-4">
-<div class="text-xs uppercase tracking-wide text-amber-500 font-bold">Railway undertakings</div>
-<div class="mt-2 text-sm"><b>Platform lengths</b>: which trains fit, and when to tell passengers to move forward or back.</div>
+<div class="text-xs uppercase tracking-wide text-amber-500 font-bold">Strategic traffic planners</div>
+<div class="mt-2 text-sm"><b>Run-time calculation</b> and <b>simulation of timetables</b> on the infrastructure as it is modelled in DIM.</div>
 </div>
 
 <div class="rounded-lg border-t-4 border-green-500 bg-green-500/5 p-4">
@@ -186,7 +196,7 @@ Railway is a slow business. Processes inside a company don't change fast. But DI
 </div>
 
 <!--
-[0:45] Three kinds of consumers today. ERTMS, as I said. Railway undertakings, the train operators: they use our platform lengths to know which trains fit, and whether passengers need to move forward or backward. And RINF, the EU Register of Infrastructure, which every infrastructure manager must report to. We generate it straight from the graph, and it was the first submission at micro, topology, level.
+[0:45] Three kinds of consumers today. ERTMS, as I said. Strategic traffic planners: they use DIM for run-time calculation and to simulate timetables before they go live. And RINF, the EU Register of Infrastructure, which every infrastructure manager must report to. We generate it straight from the graph, and it was the first submission at micro, topology, level.
 -->
 
 ---
@@ -272,7 +282,7 @@ layout: full
 - A **conventional REST API**, documented with **Swagger / OpenAPI**
 - Responses are **JSON-LD**
 - Built **from the knowledge graph**, with some indexing in the backend
-- Developers get clean JSON; the data stays linked
+- Developers get clean JSON-LD; the data stays linked
 
 </v-clicks>
 
@@ -320,14 +330,14 @@ So that's the project, and it is real. Now: why SPARQL Anything, and what I'd do
 
 <div class="text-sm">
 
-| Requirement | railML 3 | ERA |
-|---|:--:|:--:|
-| Native ontology | ○ | ● |
-| RINF compatibility | ◑ | ● |
-| Proven industrial adoption | ● | ◑ |
-| Detailed asset catalogue | ◕ | ◔ |
-| Timetable management | ◕ | ○ |
-| ETCS data exchange | ◕ | ○ |
+| Requirement | railML 3 | ERA | DIY |
+|---|:--:|:--:|:--:|
+| Native ontology | ○ | ● | ● |
+| RINF compatibility | ◑ | ● | ○ |
+| Proven industrial adoption | ● | ◑ | ○ |
+| Detailed asset catalogue | ◕ | ◔ | ○ |
+| Timetable management | ◕ | ○ | ○ |
+| ETCS data exchange | ◕ | ○ | ○ |
 
 <div class="text-xs opacity-60 mt-1">● full ◕ good ◑ partial ◔ limited ○ none</div>
 
@@ -342,7 +352,7 @@ So that's the project, and it is real. Now: why SPARQL Anything, and what I'd do
 
 <!--
 [1:30] Why SPARQL Anything? Our team was new to knowledge graphs. We had to learn SPARQL to query the graph anyway, so why learn R2RML or RML on top? One language for mapping and querying.
-And which ontology? The model that covers the most proven use cases wins. ERA is native RDF and mandated for RINF, but railML covers far more of what we need today: asset catalogue, timetabling, ETCS data exchange. So railML is the backbone, ERA is an export target.
+And which ontology? The model that covers the most proven use cases wins. ERA is native RDF and mandated for RINF, but railML covers far more of what we need today: asset catalogue, timetabling, ETCS data exchange. And building our own ontology would give us a native ontology and nothing else. So railML is the backbone, ERA is an export target.
 -->
 
 ---
@@ -353,7 +363,7 @@ And which ontology? The model that covers the most proven use cases wins. ERA is
 
 <div class="col-span-3">
 
-```sparql {all|10-15|1-8|all}
+```sparql
 CONSTRUCT {
   ?balise a railml3:Balise, rtm:NetEntity ;
     rdfs:label ?label ;
@@ -391,7 +401,7 @@ Fine for one file. But real mappings span files, need geometry, and need fixes t
 </div>
 
 <!--
-[1:00] This is how we started. One CONSTRUCT per source file. (click) The SERVICE clause reads the CSV through Façade-X, (click) and the CONSTRUCT writes railML and RTM triples directly. Source to target in one step.
+[1:00] This is how we started. One CONSTRUCT per source file. The SERVICE clause reads the CSV through Façade-X, and the CONSTRUCT writes railML and RTM triples directly. Source to target in one step.
 (click) That's fine for one file. But real mappings span several files, need geometry, and need fixes to the source data. Here's what that did to us.
 -->
 
@@ -401,25 +411,24 @@ Fine for one file. But real mappings span files, need geometry, and need fixes t
 
 <div class="mess text-xs mt-1">
   <div class="row fixes">
-    <div /><div v-click="1" class="box amber">~100 SQL data patches<br><span class="opacity-70">+ spatial SQL views</span></div><div /><div /><div /><div />
+    <div /><div v-click="1" class="box amber">~100 SQL data patches</div><div /><div v-click="2" class="box red">6 Python steps<br><span class="opacity-70">geometry · tracks · sequences</span></div><div />
   </div>
-  <div class="row arrows"><div /><div v-click="1">⇣</div><div /><div /><div /><div /></div>
+  <div class="row arrows"><div /><div v-click="1">⇣</div><div /><div v-click="2">⇣</div><div /></div>
   <div class="row main">
-    <div class="box">Source<br><span class="opacity-70">GeoPackage</span></div>
-    <div class="box">Source Ingestor<br><span class="opacity-70">CSV export</span></div>
+    <div class="box">Source<br><span class="opacity-70">GeoPackage, XML, JSON, …</span></div>
+    <div class="box">Source Ingestor</div>
     <div class="box blue">SPARQL Anything<br><span class="opacity-70">~50 CONSTRUCTs</span></div>
     <div class="box">Jena Fuseki</div>
-    <div class="box">Split<br><span class="opacity-70">15 queries</span></div>
-    <div class="box">railML · RINF<br>API</div>
+    <div class="box">railML · RINF · API</div>
   </div>
-  <div class="row arrows"><div /><div /><div /><div v-click="3">⇡</div><div v-click="2">⇖</div><div /></div>
+  <div class="row arrows"><div /><div v-click="2">⇡</div><div /><div v-click="3">⇡</div><div /></div>
   <div class="row fixes">
-    <div /><div /><div /><div v-click="3" class="box red">61 post-processing<br><span class="opacity-70">SPARQL UPDATEs</span></div><div v-click="2" class="box red">6 Python steps<br><span class="opacity-70">geometry · tracks</span></div><div />
+    <div /><div v-click="2" class="box red">Spatial SQL views<br><span class="opacity-70">SpatiaLite</span></div><div /><div v-click="3" class="box red">61 post-processing<br><span class="opacity-70">SPARQL UPDATEs</span></div><div />
   </div>
 </div>
 
 <style>
-.mess .row { display: grid; grid-template-columns: repeat(6, 1fr); gap: .9rem; align-items: center; }
+.mess .row { display: grid; grid-template-columns: repeat(5, 1fr); gap: .9rem; align-items: center; }
 .mess .main .box + .box { position: relative; }
 .mess .main .box + .box::before { content: '→'; position: absolute; left: -.85rem; top: 50%; transform: translateY(-50%); opacity: .6; }
 .mess .arrows > div { text-align: center; font-size: 1.2rem; line-height: 1.4; opacity: .7; }
@@ -436,9 +445,9 @@ Fine for one file. But real mappings span files, need geometry, and need fixes t
 </div>
 
 <!--
-[2:00] This is what grew around that simple CONSTRUCT. SPARQL Anything doesn't read databases, so a Source Ingestor exports CSV.
+[2:00] This is what grew around that simple CONSTRUCT. The source is a GeoPackage, but also XML and JSON. SPARQL Anything doesn't read databases, so a Source Ingestor prepares the files.
 (click) Data quality issues in the source take months to fix upstream, so we patch in SQL: about a hundred patches, and they must run before anything else reads the data.
-(click) GeoSPARQL is geometry-centric. No linear referencing, no routing, not even a function to get the X coordinate. And many engines don't implement the full spec. So spatial logic went into SpatiaLite SQL and six Python steps.
+(click) GeoSPARQL is geometry-centric. No linear referencing, no routing, not even a function to get the X coordinate. And many engines don't implement the full spec. So spatial logic went into SQL views in the Source Ingestor, and six Python steps that work on the graph in Fuseki.
 (click) And because mappings span files, 61 post-processing UPDATEs run in a fixed order. That's an imperative program written in SPARQL. Nobody can tell you which rule produced which triple.
 -->
 
@@ -558,6 +567,22 @@ ex:rule_balise a sh:SPARQLRule ;
 
 ---
 
+# A minute of topology
+
+<TopoShortcut :step="$clicks" />
+
+<div v-click="3" />
+
+<!--
+[1:00] To understand the next rule, one minute of railway topology.
+The network is a graph of net elements, pieces of track with a direction from 0 to 1, connected by net relations that say where a train can go.
+(click) An operational point, a station, is an area location: it lists the net elements it covers.
+(click) A signal is a spot location: one net element and an intrinsic coordinate, here e2 at 0.8. No coordinates needed.
+(click) Now the question every user asks: in which station is this signal? In RDF that is five hops: from the signal to its spot location, to the net element, back through the associated net element and the area location, to the operational point.
+-->
+
+---
+
 # Enrich for the user: topology shortcuts
 
 <div class="grid grid-cols-5 gap-6">
@@ -603,8 +628,7 @@ Computed once per build, used by the JSON datasets, the search and the explorer.
 <div class="text-xs opacity-60 mt-2">From the DIM pipeline (simplified): every <code>sh:SPARQLRule</code> runs as an INSERT on the staging graph.</div>
 
 <!--
-[1:00] And this is the third layer, straight from the DIM pipeline. A user asks: in which station is this signal? In RailTopoModel that's a five or six hop path: the signal's location, its net element, the area location of the operational point that covers that net element.
-Nobody should have to write that query. So a SHACL rule computes it once per build and adds a one-hop shortcut: in operational point, on railway line, on railway track. The JSON datasets, the search and the explorer all read those shortcuts. It's not a scheme transformation, it's making the users' life easier, and the topology stays the source of truth.
+[0:45] This is the third layer, straight from the DIM pipeline. Nobody should have to write that five-hop query. So a SHACL rule computes it once per build and adds a one-hop shortcut: in operational point, on railway line, on railway track. The JSON datasets, the search and the explorer all read those shortcuts. It's not a scheme transformation, it's making the users' life easier, and the topology stays the source of truth.
 -->
 
 ---
@@ -615,7 +639,7 @@ class: text-center
 # Takeaways
 
 <div class="mt-4 max-w-3xl mx-auto text-left text-lg leading-relaxed space-y-3">
-<div>🚆 A knowledge graph <b>serving production systems</b> is a valid case: DIM feeds ETCS engineering, train operators and RINF, built on SPARQL Anything.</div>
+<div>🚆 A knowledge graph <b>serving production systems</b> is a valid case: DIM feeds ETCS engineering, traffic planning and RINF, built on SPARQL Anything.</div>
 <div>🧱 <b>Triplify first, then transform and enrich with rules.</b> Don't map straight into your target model.</div>
 <div>📐 GeoSPARQL needs <b>linear referencing</b> before network domains can stay in the graph.</div>
 </div>
@@ -644,6 +668,6 @@ Mathias Vanden Auweele · mathias@matdata.eu · Next up: Ivo Velitchkov on decou
 </div>
 
 <!--
-[1:00] Three things. A knowledge graph serving production systems is a valid case: DIM does it today for ETCS, train operators and RINF, built on SPARQL Anything. Triplify first, then transform and enrich with rules. And GeoSPARQL needs linear referencing before domains like ours can keep their logic in the graph.
+[1:00] Three things. A knowledge graph serving production systems is a valid case: DIM does it today for ETCS, traffic planning and RINF, built on SPARQL Anything. Triplify first, then transform and enrich with rules. And GeoSPARQL needs linear referencing before domains like ours can keep their logic in the graph.
 Slides, paper, the portal and RINF Atlas are behind these QR codes. Ivo is up next, on why decoupling graph construction pays off. Thank you.
 -->
