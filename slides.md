@@ -323,15 +323,6 @@ layout: full
 [1:00] This is the part I find most interesting for this audience. Most developers don't want SPARQL. So we offer a conventional REST API, documented with Swagger. (click) But the responses are JSON-LD, (click) constructed from the knowledge graph, with a bit of indexing in the backend so it is fast. (click) So people interact with the knowledge graph in the way they're used to, through JSON files, and still get linked data.
 -->
 
----
-layout: full
----
-
-<Clip full src="/assets/rinf-atlas.webm" poster="/assets/rinf-atlas.png" caption="RINF Atlas (rinf-atlas.matdata.eu) · open source · Europe down to the tracks, switches and signals of Oslo S, generated from DIM" />
-
-<!--
-[0:45] And RINF Atlas, which I open sourced. It shows what is inside the European RINF knowledge graph. Here we zoom from Europe into Oslo Central, where you can see the micro level: tracks, switches, signals, all generated from DIM.
--->
 
 ---
 layout: section
@@ -345,43 +336,20 @@ So that's the project, and it is real. Now: why SPARQL Anything, and what I'd do
 
 ---
 
-# Why SPARQL Anything, and which ontology
+# Why SPARQL Anything
 
-<div class="grid grid-cols-2 gap-8 mt-2">
-
-<div>
-
-**One language.** The team was new to knowledge graphs. We had to learn SPARQL for querying anyway, so why learn a second mapping language?
-
-<div class="mt-4 text-sm opacity-80">Sources: CSV, XML, GeoPackage (via CSV export)</div>
-
+<div class="text-2xl mt-10 leading-snug max-w-3xl">
+<b>One language.</b> The team was new to knowledge graphs. We had to learn SPARQL for querying anyway, so why learn a second mapping language?
 </div>
 
-<div class="text-sm">
-
-| Requirement | railML 3 | ERA | DIY |
-|---|:--:|:--:|:--:|
-| Native ontology | ○ | ● | ● |
-| RINF compatibility | ◑ | ● | ○ |
-| Proven industrial adoption | ● | ◑ | ○ |
-| Detailed asset catalogue | ◕ | ◔ | ○ |
-| Timetable management | ◕ | ○ | ○ |
-| ETCS data exchange | ◕ | ○ | ○ |
-
-<div class="text-xs opacity-60 mt-1">● full ◕ good ◑ partial ◔ limited ○ none</div>
-
-</div>
-
-</div>
-
-<div class="mt-4 grid grid-cols-2 gap-6 text-sm">
-<div class="p-3 rounded-lg bg-green-500/10"><b>railML 3</b> as the internal backbone: it covers the most proven use cases.</div>
-<div class="p-3 rounded-lg bg-blue-500/10"><b>ERA ontology</b> as an export target for RINF.</div>
+<div class="grid grid-cols-3 gap-4 mt-10 text-sm">
+<div class="card">No R2RML, RML or custom code: mapping <b>is</b> a SPARQL <code>CONSTRUCT</code>.</div>
+<div class="card">Façade-X gives one lens over CSV, XML, JSON and more.</div>
+<div class="card">Written and tested in the same YASGUI the team already uses for queries.</div>
 </div>
 
 <!--
-[1:15] Why SPARQL Anything? Our team was new to knowledge graphs. We had to learn SPARQL to query the graph anyway, so why learn R2RML or RML on top? One language for mapping and querying.
-And which ontology? The model that covers the most proven use cases wins. ERA is native RDF and mandated for RINF, but railML covers far more of what we need today: asset catalogue, timetabling, ETCS data exchange. And building our own ontology would give us a native ontology and nothing else. So railML is the backbone, ERA is an export target.
+[0:45] Why SPARQL Anything? Our team was new to knowledge graphs. We had to learn SPARQL to query the graph anyway, so why learn R2RML or RML on top? One language for mapping and querying, one lens over every file format, and the same tooling.
 -->
 
 ---
