@@ -105,6 +105,35 @@ production system, the DIM.
 -->
 
 ---
+
+# Open-source tools we maintain
+
+<div class="grid grid-cols-3 gap-3 mt-2">
+<div class="oss"><div class="oss-h"><b>MatGUI + Yasgui plugins</b><span>matgui.matdata.eu</span></div><div class="oss-d">Knowledge graph and SPARQL workbench; table, graph, map, chart and explain plugins for Yasgui.</div></div>
+<div class="oss"><div class="oss-h"><b>SHACL Report</b><span>shacl-report.matdata.eu</span></div><div class="oss-d">Validate with SHACL, or read any validator&rsquo;s report, as a readable web view or CI report.</div></div>
+<div class="oss"><div class="oss-h"><b>RDF Rules Playground</b><span>rdf-rules-playground.matdata.eu</span></div><div class="oss-d">Run SHACL-AF rules in the browser and see which rule inferred each triple.</div></div>
+<div class="oss"><div class="oss-h"><b>RDF Compare</b><span>rdf-compare</span></div><div class="oss-d">Fast CLI diff of two RDF files, as two named graphs or a website.</div></div>
+<div class="oss"><div class="oss-h"><b>RINF Atlas</b><span>rinf-atlas.matdata.eu</span></div><div class="oss-d">Map and faceted search over the EU infrastructure register, PROD and UAT.</div></div>
+<div class="oss"><div class="oss-h"><b>RINF Routebook</b><span>rinf-routebook</span></div><div class="oss-d">Route between two stations on the RINF track topology: signals, speeds, gradients.</div></div>
+<div class="oss"><div class="oss-h"><b>Ontology &amp; Schema Explorers</b><span>ontology-explorer · schema-explorer</span></div><div class="oss-d">Ontologies, SKOS, SHACL, XSD and JSON Schema as UML-like diagrams and pages.</div></div>
+<div class="oss"><div class="oss-h"><b>SPARQL Guard</b><span>sparql-guard</span></div><div class="oss-d">Access-control proxy for any SPARQL endpoint: graph and row-level policies in SHACL.</div></div>
+<div class="oss"><div class="oss-h"><b>RDF Data Manager</b><span>rdf-data-manager</span></div><div class="oss-d">Browser-only CRUD over a SPARQL endpoint, forms generated from SHACL/DASH shapes.</div></div>
+</div>
+
+<div class="mt-3 text-sm muted">All on <b>github.com/Matdata-eu</b>, most running in the browser. Many grew out of DIM needs.</div>
+
+<style>
+.oss { background: var(--c-surface); border-top: 3px solid var(--c-sky); border-radius: 8px; padding: 8px 10px; }
+.oss-h b { color: var(--c-heading); font-size: 14px; display: block; }
+.oss-h span { color: var(--c-blue); font-size: 10.5px; font-family: ui-monospace, monospace; }
+.oss-d { font-size: 11.5px; line-height: 1.35; margin-top: 4px; color: var(--c-ink); }
+</style>
+
+<!--
+[0:30] Matdata also maintains a set of open-source tools, most of them born from needs in this project: MatGUI as a SPARQL workbench with Yasgui plugins, a SHACL report viewer, a playground for SHACL rules, an RDF diff, RINF Atlas and the routebook, explorers for ontologies and schemas, and SPARQL Guard for access control. All on GitHub under Matdata-eu.
+-->
+
+---
 layout: center
 ---
 
