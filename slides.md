@@ -499,9 +499,9 @@ And rules don't have to be slow: the same SHACL rule set runs in 10 minutes in m
 
 ---
 
-# My advice: triplify, transform, enrich
+# My advice: triplify, transform, enrich, test
 
-```mermaid {scale: 0.7}
+```mermaid {scale: 0.58}
 flowchart LR
   S1[CSV] --> SA
   S2[JSON] --> SA
@@ -516,7 +516,7 @@ flowchart LR
   style I fill:#a855f733,stroke:#9333ea
 ```
 
-<div class="grid grid-cols-3 gap-4 mt-3 text-xs">
+<div class="grid grid-cols-4 gap-3 mt-3 text-xs">
 
 <div v-click class="rounded-lg border-t-4 border-blue-500 bg-blue-500/5 p-4">
 <b>1 · Replicate the source as RDF</b><br>
@@ -533,13 +533,19 @@ A faithful copy of the source system, no semantics added. Light provenance is en
 Not a scheme change: rules that <b>infer what users need</b>, like topology relations and shortcuts, so their queries stay simple.
 </div>
 
+<div v-click class="rounded-lg border-t-4 border-amber-500 bg-amber-500/5 p-4">
+<b>4 · Test each step on its own</b><br>
+Every rule group reads declared inputs and writes <b>its own named graph</b>, no deletes. Change one rule, rerun that step, not the whole pipeline.
+</div>
+
 </div>
 
 <!--
-[1:45] So my advice: don't do what we did. Don't go from the source straight into your target ontology.
+[2:00] So my advice: don't do what we did. Don't go from the source straight into your target ontology.
 (click) First, use SPARQL Anything for what it is great at: replicate the source system as a knowledge graph. CSV, JSON, XML, an API, whatever: the result is RDF that mirrors the source. This step is mechanical. You hardly need provenance here, just which file and when it was converted.
 (click) Then transform from that source graph into your target model with rules, for example SHACL rules. Now you can say: all entities of this source class are converted into this target shape by this specific rule. And because rules are triples, you can annotate them. That's where true provenance matters.
 (click) And a third layer that is easy to forget: rules that don't change the scheme at all, but add what your users need. Topology relations, shortcuts, derived values. That's what makes a knowledge graph pleasant to consume.
+(click) And make every step testable by itself. Today, if I change one post-processing query, I rerun the mapping and the whole post-processing chain to see the effect, because the updates delete and overwrite each other. If every rule group reads declared inputs and writes its own named graph, you rerun only that group, against the output of the step before or a small test fixture.
 Ivo will go deeper into the decoupling in the next talk.
 -->
 
