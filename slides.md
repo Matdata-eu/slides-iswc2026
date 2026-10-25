@@ -191,6 +191,7 @@ The goal: <b>one authoritative model</b> of the railway infrastructure, serving 
 - Railway is a slow business: processes inside an infrastructure manager don't change overnight.
 - Still: **the ERTMS programme uses DIM as its starting point** to implement ETCS on the lines.
 - DIM is **strategically chosen as the successor** for supplying infrastructure data to traffic management, traffic planning and timetabling.
+- DIM currently builds the knowledge graph from source, but we'll soon cut this pipeline and start **managing** the knowledge graph ourselves (and follow changesets from sources)
 
 </v-clicks>
 
@@ -270,17 +271,57 @@ One sentence on why railway is special: it is topology-based. Every signal, ever
 layout: full
 ---
 
-<Clip full src="/assets/dim-data.webm" poster="/assets/dim-data.png" caption="DIM portal · railML files per subnetwork · datasets in RDF, JSON-LD and CSV · key figures from the graph" />
+<Clip full src="/assets/01-website-navigation.gif" caption="DIM portal · railML files per subnetwork · datasets in RDF, JSON-LD and CSV" />
 
 <!--
-[0:35] This is the DIM web portal. Everything you see comes from the knowledge graph: railML files for each subnetwork, the datasets themselves in RDF, JSON-LD and CSV, and key figures computed from the graph.
+[0:25] This is the DIM web portal. Everything you see comes from the knowledge graph: railML files for each subnetwork, and the datasets themselves in RDF, JSON-LD and CSV.
 -->
 
 ---
 layout: full
 ---
 
-<Clip full src="/assets/dim-tps.webm" poster="/assets/dim-tps.png" caption="TPS mapping · DIM netelements linked to the timetable-planning topology, both maps in sync" />
+<Clip full src="/assets/02-key-figures.gif" caption="Key figures computed from the graph" />
+
+<!--
+[0:15] Key figures, computed straight from the graph.
+-->
+
+---
+layout: full
+---
+
+<Clip full src="/assets/03-rinf-status-report.gif" caption="RINF status report · which RINF parameters we fill, and which are still missing" />
+
+<!--
+[0:20] The RINF status report: for every parameter of the EU Register of Infrastructure, whether we already fill it from the graph or it is still missing.
+-->
+
+---
+layout: full
+---
+
+<Clip full src="/assets/04-sparnatural-search.gif" caption="Search builder on Sparnatural: point-and-click SPARQL" />
+
+<!--
+[0:25] The search builder integrates Sparnatural, so people can build SPARQL queries by clicking, without knowing SPARQL.
+-->
+
+---
+layout: full
+---
+
+<Clip full src="/assets/05-data-catalog.gif" caption="Data catalog of what each dataset contains" />
+
+<!--
+[0:20] And the data catalog documents what is in each dataset and where it comes from.
+-->
+
+---
+layout: full
+---
+
+<Clip full src="/assets/06-tps-mapping.gif" caption="TPS mapping · DIM netelements linked to the timetable-planning topology, both maps in sync" />
 
 <!--
 [0:30] The TPS mapping: we link the topology of the timetable planning system to ours. Hover a netelement on our map and its counterpart lights up in the TPS schematic, and the other way round.
@@ -290,10 +331,10 @@ layout: full
 layout: full
 ---
 
-<Clip full src="/assets/dim-tools.webm" poster="/assets/dim-tools.png" caption="Search builder on Sparnatural: point-and-click SPARQL · data catalog of what each dataset contains" />
+<Clip full src="/assets/07-data-validation-portal.gif" caption="Data validation portal · SHACL results per run, quality score and progress over time" />
 
 <!--
-[0:45] The tools. The search builder integrates Sparnatural, so people can build SPARQL queries by clicking, without knowing SPARQL. And the data catalog documents what is in each dataset and where it comes from.
+[0:20] And the data validation portal: the SHACL results of each run, a quality score, and how the findings evolve over time.
 -->
 
 ---
@@ -306,14 +347,10 @@ layout: full
 
 <div>
 
-<v-clicks>
-
 - A **conventional REST API**, documented with **Swagger / OpenAPI**
 - Responses are **JSON-LD**
 - Built **from the knowledge graph**, with some indexing in the backend
 - Developers get clean JSON-LD; the data stays linked
-
-</v-clicks>
 
 </div>
 

@@ -1,14 +1,30 @@
 <script setup lang="ts">
 // A looping screen recording that starts from the beginning whenever its slide is shown.
+// Videos are paused off-slide; GIFs are restarted by giving the <img> a fresh blob URL.
 // Exports (PDF/PNG) show the poster instead of the video.
-import { ref, watch } from 'vue'
+import { computed, onBeforeUnmount, ref, watch } from 'vue'
 import { useIsSlideActive, useNav } from '@slidev/client'
-defineProps<{ src: string, poster?: string, caption?: string, full?: boolean }>()
+const props = defineProps<{ src: string, poster?: string, caption?: string, full?: boolean }>()
 const { isPrintMode } = useNav()
 const isActive = useIsSlideActive()
 const video = ref<HTMLVideoElement>()
+const isGif = computed(() => props.src.toLowerCase().endsWith('.gif'))
+
+let blob: Promise<Blob> | undefined
+const gifUrl = ref<string>()
+async function restartGif() {
+  blob ??= fetch(props.src).then(r => r.blob())
+  const url = URL.createObjectURL(await blob)
+  if (gifUrl.value) URL.revokeObjectURL(gifUrl.value)
+  gifUrl.value = url
+}
+onBeforeUnmount(() => { if (gifUrl.value) URL.revokeObjectURL(gifUrl.value) })
 
 watch([isActive, video], ([active, el]) => {
+  if (isGif.value) {
+    if (active && !isPrintMode.value) void restartGif().catch(() => {})
+    return
+  }
   if (!el) return
   if (active) {
     el.currentTime = 0
@@ -22,6 +38,7 @@ watch([isActive, video], ([active, el]) => {
 <template>
   <figure class="clip" :class="{ full }">
     <img v-if="isPrintMode && poster" :src="poster" alt="" />
+    <img v-else-if="isGif" :src="gifUrl ?? src" alt="" />
     <video v-else ref="video" :src="src" :poster="poster" loop muted playsinline preload="auto" />
     <figcaption v-if="caption">{{ caption }}</figcaption>
   </figure>
